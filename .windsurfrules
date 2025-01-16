@@ -1,0 +1,91 @@
+project-root/
+├── public/
+│   ├── images/             # Static assets (e.g., logos, illustrations)
+│   ├── favicon.ico         # Favicon for the app
+│   ├── robots.txt          # SEO and crawler configuration
+│   └── uploads/            # Temporary folder for file uploads (optional, S3 preferred)
+│
+├── src/
+│   ├── app/                # App routes
+│   │   ├── (marketing)/    # Publicly accessible routes for landing pages
+│   │   │   ├── page.tsx    # Landing page
+│   │   │   ├── about/      # About page
+│   │   │   │   └── page.tsx
+│   │   │   ├── pricing/    # Pricing page
+│   │   │   │   └── page.tsx
+│   │   │   └── contact/    # Contact page
+│   │   │       └── page.tsx
+│   │   ├── (dashboard)/    # Protected routes for user dashboard
+│   │   │   ├── layout.tsx  # Layout for authenticated user routes
+│   │   │   ├── dashboard/  # Dashboard home
+│   │   │   │   └── page.tsx
+│   │   │   ├── profile/    # User profile management
+│   │   │   │   └── page.tsx
+│   │   │   ├── uploads/    # Uploaded PDFs list
+│   │   │   │   └── page.tsx
+│   │   │   ├── chat/       # Chat interface
+│   │   │   │   └── page.tsx
+│   │   │   └── billing/    # Payment and subscription management
+│   │   │       └── page.tsx
+│   │   ├── api/            # API routes
+│   │   │   ├── auth/       # Authentication endpoints
+│   │   │   │   ├── [...nextauth].ts # NextAuth.js configuration
+│   │   │   ├── upload/     # PDF upload endpoint
+│   │   │   │   └── route.ts
+│   │   │   ├── chat/       # GPT-4 integration
+│   │   │   │   └── route.ts
+│   │   │   ├── payment/    # Stripe webhook endpoints
+│   │   │   │   └── route.ts
+│   │   │   └── users/      # User-related endpoints
+│   │       └── route.ts
+│   ├── components/         # Reusable components
+│   │   ├── ui/             # Generic UI components
+│   │   │   ├── Button.tsx
+│   │   │   ├── Modal.tsx
+│   │   │   └── Spinner.tsx
+│   │   ├── layouts/        # Layout components
+│   │   │   ├── AuthLayout.tsx
+│   │   │   └── MainLayout.tsx
+│   │   ├── forms/          # Form components
+│   │   │   ├── LoginForm.tsx
+│   │   │   └── SignupForm.tsx
+│   │   └── charts/         # Charts and visualization components
+│   │       └── UsageChart.tsx
+│   ├── contexts/           # Context providers (e.g., Auth, Theme)
+│   │   ├── AuthContext.tsx
+│   │   ├── ThemeContext.tsx
+│   │   └── ChatContext.tsx
+│   ├── hooks/              # Custom React hooks
+│   │   ├── useAuth.ts
+│   │   ├── useFileUpload.ts
+│   │   └── useChat.ts
+│   ├── lib/                # Utility libraries and helpers
+│   │   ├── gpt.ts          # GPT-4 interaction helpers
+│   │   ├── stripe.ts       # Stripe integration helpers
+│   │   ├── validation.ts   # Form validation schemas
+│   │   └── apiClient.ts    # API client setup (e.g., Axios or Fetch wrapper)
+│   ├── styles/             # Global and component-specific styles
+│   │   ├── globals.css     # Global CSS
+│   │   └── tailwind.css    # TailwindCSS configuration
+│   ├── types/              # TypeScript types and interfaces
+│   │   ├── auth.d.ts
+│   │   ├── chat.d.ts
+│   │   └── pdf.d.ts
+│   ├── utils/              # General utilities
+│   │   ├── fileUtils.ts    # File handling utilities
+│   │   ├── stringUtils.ts  # String manipulation utilities
+│   │   └── validation.ts   # General validation utilities
+│   └── middleware.ts       # Middleware for route protection
+│
+├── prisma/                 # Prisma schema and migrations
+│   ├── schema.prisma       # Database schema
+│   └── migrations/         # Prisma migration files
+│
+│
+├── .env                    # Environment variables
+├── .eslintrc.js            # ESLint configuration
+├── .prettierrc             # Prettier configuration
+├── next.config.js          # Next.js configuration
+├── package.json            # Project dependencies
+├── tailwind.config.js      # TailwindCSS configuration
+└── tsconfig.json           # TypeScript configuration
