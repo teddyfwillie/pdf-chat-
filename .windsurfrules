@@ -2,8 +2,7 @@ project-root/
 ├── public/
 │   ├── images/             # Static assets (e.g., logos, illustrations)
 │   ├── favicon.ico         # Favicon for the app
-│   ├── robots.txt          # SEO and crawler configuration
-│   └── uploads/            # Temporary folder for file uploads (optional, S3 preferred)
+│   └── uploads/            # Temporary folder for file uploads (optional)
 │
 ├── src/
 │   ├── app/                # App routes
@@ -77,9 +76,9 @@ project-root/
 │   │   └── validation.ts   # General validation utilities
 │   └── middleware.ts       # Middleware for route protection
 │
-├── prisma/                 # Prisma schema and migrations
-│   ├── schema.prisma       # Database schema
-│   └── migrations/         # Prisma migration files
+├── supabase/                 # supabase schema and migrations
+│   ├── schema.supabase       # Database schema
+│   └── migrations/         # supabase migration files
 │
 │
 ├── .env                    # Environment variables

@@ -63,36 +63,16 @@ export default function BillingPage() {
                   </li>
                 ))}
               </ul>
-              <Button className="w-full" variant={plan.current ? "outline" : "default"}>
+              <Button
+                className="w-full"
+                variant={plan.current ? "outline" : "default"}
+              >
                 {plan.current ? "Current Plan" : "Upgrade"}
               </Button>
             </CardContent>
           </Card>
         ))}
       </div>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Payment Method</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="rounded-lg border p-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-4">
-                <div className="text-sm font-medium">
-                  •••• •••• •••• 4242
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  Expires 12/2024
-                </div>
-              </div>
-              <Button variant="ghost" size="sm">
-                Edit
-              </Button>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
 
       <Card>
         <CardHeader>

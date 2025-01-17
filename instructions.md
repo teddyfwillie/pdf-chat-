@@ -33,9 +33,9 @@ This document outlines the requirements for developing an AI-powered web applica
 
 #### **User Authentication**
 
-- Users can sign up, log in, and manage their profiles.
-- Implement password recovery and two-factor authentication (2FA) for enhanced security.
-- Users can log in using third-party providers (Google, GitHub, etc.) via Clerk.
+- Users can sign up, log in, and manage their profiles using supabase.
+- Implement password recovery.
+- Users can log in with email and password and also use third-party providers (Google) via OAuth.
 
 #### **PDF Upload**
 
@@ -113,13 +113,12 @@ This document outlines the requirements for developing an AI-powered web applica
 - **Tech Stack**:
 
   - Framework: Next.js (App Router for routing).
-  - Database: PostgreSQL (hosted on Supabase or AWS RDS).
-  - ORM: Drizzle (for type-safe database interactions).
+  - Database: PostgreSQL (hosted on Supabase).
   - API: OpenAI's GPT-4 (with rate limiting to control costs).
   - Payments: Stripe (with webhooks for subscription events).
   - UI Library: shadcn/ui with Tailwind CSS.
-  - Auth: Clerk (for authentication and user management).
-  - File Storage: AWS S3 or Cloudflare R2 for storing uploaded PDFs.
+  - Auth: oauth supabase (for authentication and user management).
+  - File Storage: Supabase storage for storing uploaded PDFs.
 
 - **DevOps**:
   - Use GitHub Actions for CI/CD pipelines.
